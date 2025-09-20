@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Autocart - Project Details</title>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <style>
+      /* Remove shape decorations */
+      #project .section-deco,
+      #project .section-deco::before,
+      #project .section-deco::after,
+      #project .card::before,
+      #project .card::after {
+        display: none !important;
+        content: none !important;
+      }
+
+      /* Spacing between containers */
+      #project .card {
+        margin-bottom: 2.5rem;
+        padding: 1.5rem;
+      }
+
+      /* Tech stack container */
+      .tech-stack-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1.5rem;
+        margin-top: 1rem;
+      }
+
+      .tech-stack-card {
+        padding: 1rem;
+        border-radius: 12px;
+        background: var(--container-color);
+        box-shadow: var(--box-shadow);
+        text-align: center;
+      }
+
+      /* Project description spacing */
+      .project-description {
+        margin-top: 1rem;
+        line-height: 1.6;
+      }
+
+      /* Swiper images (services swiper style) */
+      .project-swiper {
+        width: 100%;
+        max-width: 900px;
+        margin: 0 auto;
+        padding-top: 1rem;
+        padding-bottom: 2rem;
+      }
+
+      .project-swiper .swiper-slide {
+        width: auto;
+        display: flex;
+        justify-content: center;
+      }
+
+      .project-swiper .swiper-slide img {
+        width: 100%;
+        max-width: 600px;
+        border-radius: 12px;
+        object-fit: cover;
+      }
+
+      /* Pagination bullets like services swiper */
+      .swiper-pagination {
+        text-align: center;
+        margin-top: 1rem;
+      }
+
+      .swiper-pagination-bullet {
+        width: 12px;
+        height: 12px;
+        background: var(--first-color);
+        opacity: 0.4;
+        margin: 0 6px !important;
+        transition: all 0.3s;
+      }
+
+      .swiper-pagination-bullet-active {
+        opacity: 1;
+        transform: scale(1.2);
+      }
+
+      /* Back button center */
+      .btn-container {
+        text-align: center;
+        margin-top: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header"></header>
+
+    <!-- Project Section -->
+    <section class="work section" id="project">
+      <h2 class="section-title" data-title="Project Details">
+        Autocart - The Future of Shopping 
+      </h2>
+
+      <div class="container">
+        <!-- Project Overview -->
+        <div class="card">
+          <h3 class="services-title">Project Overview</h3>
+          <p class="project-description">
+            Autocart is an autonomous shopping cart system designed to transform
+            the retail experience by combining computer vision, IoT, and mobile
+            technology. The cart is equipped with YOLOv4 object detection and a
+            Raspberry Pi for real-time product recognition, autonomous
+            navigation, and obstacle avoidance. An Arduino UNO manages sensor
+            integration, while Firebase enables cloud connectivity and
+            transaction handling. A Flutter-based mobile app provides customers
+            with digital billing, easy payments, and a live view of their
+            scanned products. By automating checkout and reducing manual
+            intervention, Autocart enhances store efficiency, minimizes wait
+            times, and creates a seamless, tech-driven shopping experience.
+          </p>
+        </div>
+
+        <!-- Tech Stack -->
+        <div class="card">
+          <h3 class="services-title">Tech Stack Used</h3>
+          <div class="tech-stack-container">
+            <div class="tech-stack-card">
+              <h4>Hardware</h4>
+              <p>
+                Raspberry Pi (real-time processing, navigation, obstacle avoidance), Arduino UNO (sensor integration)
+              </p>
+            </div>
+            <div class="tech-stack-card">
+              <h4>Computer Vision</h4>
+              <p>YOLOv4 (object detection for product recognition)</p>
+            </div>
+            <div class="tech-stack-card">
+              <h4>Backend & Cloud</h4>
+              <p>Firebase (cloud connectivity, data storage, transaction handling)</p>
+            </div>
+            <div class="tech-stack-card">
+              <h4>IoT & Sensors</h4>
+              <p>Ultrasonic/infrared sensors for navigation and obstacle detection</p>
+            </div>
+            <div class="tech-stack-card">
+              <h4>Mobile App</h4>
+              <p>Flutter framework (digital billing, live product view, payment handling)</p>
+            </div>
+            <div class="tech-stack-card">
+              <h4>Integration</h4>
+              <p>Real-time synchronization between hardware, mobile app, and cloud services</p>
+            </div>
+            
+          </div>
+        </div>
+
+        <!-- Project Images -->
+        <div class="card">
+          <h3 class="services-title">Project Images</h3>
+          <div class="swiper project-swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img
+                  src="assets/img/project-site/autocart/Autocart.png"
+                  alt="image not available 1"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="assets/img/project-site/autocart/1.jpg"
+                  alt="image not available 1"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="assets/img/project-site/autocart/2.jpg"
+                  alt="image not available 1"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="assets/img/project-site/autocart/3.jpg"
+                  alt="image not available 1"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="assets/img/project-site/autocart/4.jpg"
+                  alt="image not available 1"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="assets/img/project-site/autocart/5.jpg"
+                  alt="image not available 1"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="assets/img/project-site/autocart/6.jpg"
+                  alt="image not available 1"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="assets/img/project-site/autocart/7.jpg"
+                  alt="image not available 1"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="assets/img/project-site/autocart/8.jpg"
+                  alt="image not available 1"
+                />
+              </div>
+
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+
+        <!-- Back Button -->
+        <div class="btn-container">
+          <a href="index.html" class="btn">Back to Portfolio</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-container container">
+        <p class="footer-copyright">
+          &copy; 2025 <span>Laks</span>. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper(".project-swiper", {
+        loop: true,
+        slidesPerView: 1,
+        spaceBetween: 30,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+    </script>
+  </body>
+</html>

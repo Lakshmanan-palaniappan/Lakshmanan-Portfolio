@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Intellihome - Project Details</title>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <style>
+      /* Remove shape decorations */
+      #project .section-deco,
+      #project .section-deco::before,
+      #project .section-deco::after,
+      #project .card::before,
+      #project .card::after {
+        display: none !important;
+        content: none !important;
+      }
+
+      /* Spacing between containers */
+      #project .card {
+        margin-bottom: 2.5rem;
+        padding: 1.5rem;
+      }
+
+      /* Tech stack container */
+      .tech-stack-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1.5rem;
+        margin-top: 1rem;
+      }
+
+      .tech-stack-card {
+        padding: 1rem;
+        border-radius: 12px;
+        background: var(--container-color);
+        box-shadow: var(--box-shadow);
+        text-align: center;
+      }
+
+      /* Project description spacing */
+      .project-description {
+        margin-top: 1rem;
+        line-height: 1.6;
+      }
+
+      /* Swiper images (services swiper style) */
+      .project-swiper {
+        width: 100%;
+        max-width: 900px;
+        margin: 0 auto;
+        padding-top: 1rem;
+        padding-bottom: 2rem;
+      }
+
+      .project-swiper .swiper-slide {
+        width: auto;
+        display: flex;
+        justify-content: center;
+      }
+
+      .project-swiper .swiper-slide img {
+        width: 100%;
+        max-width: 600px;
+        border-radius: 12px;
+        object-fit: cover;
+      }
+
+      /* Pagination bullets like services swiper */
+      .swiper-pagination {
+        text-align: center;
+        margin-top: 1rem;
+      }
+
+      .swiper-pagination-bullet {
+        width: 12px;
+        height: 12px;
+        background: var(--first-color);
+        opacity: 0.4;
+        margin: 0 6px !important;
+        transition: all 0.3s;
+      }
+
+      .swiper-pagination-bullet-active {
+        opacity: 1;
+        transform: scale(1.2);
+      }
+
+      /* Back button center */
+      .btn-container {
+        text-align: center;
+        margin-top: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header"></header>
+
+    <!-- Project Section -->
+    <section class="work section" id="project">
+      <h2 class="section-title" data-title="Project Details">
+        Intellihome
+      </h2>
+
+      <div class="container">
+        <!-- Project Overview -->
+        <div class="card">
+          <h3 class="services-title">Project Overview</h3>
+          <p class="project-description">
+            IntelliHome is an IoT-based smart home automation project designed to provide remote control and monitoring of household appliances. It integrates the ESP8266 Wi-Fi module with a Flutter mobile application, enabling seamless communication between hardware and users. The project demonstrates how IoT technologies can enhance convenience, accessibility, and energy efficiency in everyday home management.
+          </p>
+        </div>
+
+        <!-- Tech Stack -->
+        <div class="card">
+          <h3 class="services-title">Tech Stack Used</h3>
+          <div class="tech-stack-container">
+            <div class="tech-stack-card">
+              <h4>Hardware</h4>
+              <p>
+                ESP8266 Wi-Fi module
+              </p>
+            </div>
+            <div class="tech-stack-card">
+              <h4>Mobile App</h4>
+              <p>Flutter framework</p>
+            </div>
+            <div class="tech-stack-card">
+              <h4>Backend & Database</h4>
+              <p>Firebase Realtime Database</p>
+            </div>
+            <div class="tech-stack-card">
+              <h4>IoT Communication</h4>
+              <p>Wireless control of appliances via ESP8266</p>
+            </div>
+            
+            
+            
+          </div>
+        </div>
+
+        <!-- Project Images -->
+        <div class="card">
+          <h3 class="services-title">Project Images</h3>
+          <div class="swiper project-swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img
+                  src="assets/img/project-site/intellihome/1.jpg"
+                  alt="image not available 1"
+                />
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+
+        <!-- Back Button -->
+        <div class="btn-container">
+          <a href="index.html" class="btn">Back to Portfolio</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-container container">
+        <p class="footer-copyright">
+          &copy; 2025 <span>Laks</span>. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper(".project-swiper", {
+        loop: true,
+        slidesPerView: 1,
+        spaceBetween: 30,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+    </script>
+  </body>
+</html>
