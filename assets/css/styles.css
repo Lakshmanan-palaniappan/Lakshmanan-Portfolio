@@ -1223,6 +1223,41 @@ html{
 }
 
 /* Responsive */
+
+/* Align text and image side-by-side for large screens */
+@media screen and (min-width: 1024px) {
+  .home-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem; /* space between name and image */
+  }
+
+  .home-content {
+    flex: 1;
+    text-align: left;
+  }
+
+  .home-banner {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+
+  .home-profile {
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+  }
+
+  .home-title {
+    font-size: 3rem;
+    line-height: 1.2;
+    word-break: break-word;
+  }
+}
+
 @media screen and (max-width: 1024px) {
   .certificates .services-card {
     width: 90vw;
