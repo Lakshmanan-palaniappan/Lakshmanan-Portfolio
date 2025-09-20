@@ -1224,36 +1224,38 @@ html{
 
 /* Responsive */
 
-/* Align text and image side-by-side for large screens */
 @media screen and (min-width: 1024px) {
   .home-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 3rem; /* space between name and image */
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 3rem !important;
+    flex-wrap: nowrap;
   }
 
   .home-content {
-    flex: 1;
-    text-align: left;
+    flex: 1 1 50% !important;
+    text-align: left !important;
   }
 
   .home-banner {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    position: relative;
+    flex: 1 1 50% !important;
+    display: flex !important;
+    justify-content: center !important;
+    position: static !important; /* overrides absolute positioning */
+    transform: none !important; /* removes any translate issues */
   }
 
   .home-profile {
-    max-width: 400px;
-    width: 100%;
-    height: auto;
+    max-width: 400px !important;
+    width: 100% !important;
+    height: auto !important;
   }
 
   .home-title {
-    font-size: 3rem;
-    line-height: 1.2;
+    font-size: 3rem !important;
+    line-height: 1.2 !important;
     word-break: break-word;
   }
 }
